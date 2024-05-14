@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <!-- CSS Links -->
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <a id="top"></a>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="img-fluid" src="images/logo.webp" alt="Logo"
+                    style="width: 80px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <form class="d-flex mx-auto w-50">
+                    <input id="searchInput" class="form-control me-1" type="text" placeholder="Search">
+                    <button id="searchBtn" class="btn btn-primary" type="button"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-3">
+                        <a id="user" class="nav-link text-light fs-5"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="login" href="login.html" class="nav-link me-5 text-light fs-5">Log in</a>
+                    </li>
+                    <li class="nav-item me-3 position-relative" id="fav">
+                        <a class="nav-link">
+                            <i class="fa-regular fa-heart fs-3 text-white"></i>
+                            <span id="favCount" class="count text-white"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 position-relative" id="cart">
+                        <a class="nav-link position-relative">
+                            <i class="fa-brands fa-opencart text-light fs-3"></i>
+                            <span class="text-info count position-absolute" id="count"></span>
+                        </a>
+                        <div class="cartProduct position-absolute" id="cartProducts">
+                            <div class="pe-3" id="menu"></div>
+                            <a href="cartProducts.html">Show all products</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="logout" class="nav-link text-light fs-5">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="searchResult w-100 row gy-3 justify-content-evenly p-3"></div>
+
+    <div class="allpage">
+
+        <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/main7.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/main2.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/main3.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/main4.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/main5.jpg" class="d-block w-100">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div> -->
+
+        <!-- Main Section Starts Here-->
+        <main>
+            <div class="main border-bottom border-2">
+                <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark slide w-100 h-100" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100 h-100 ps-lg-5">
+                        <div class="carousel-item active w-100 h-100 position-relative">
+                            <img src="images/main1111.png" class="main-img d-block ms-lg-5 h-100">
+                            <div class="carousel-caption position-absolute">
+                                <h1 class="main-title">M TECK</h1>
+                                <p class="fs-5">Shop one on one with a Specialist. Online or in a store.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-100 h-100 position-relative">
+                            <img src="images/main2222.png" class="main-img d-block ms-lg-5 h-100">
+                            <div class="carousel-caption position-absolute">
+                                <h1 class="main-title">A great deal to love.</h1>
+                                <p class="fs-5">A product by MTech.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-100 h-100 position-relative">
+                            <img src="images/main66.png" class="main-img d-block ms-lg-5 h-100">
+                            <div class="carousel-caption position-absolute">
+                                <h1 class="main-title">Designed to go places.</h1>
+                                <p class="fs-5">Take a look at what’s new, right now.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Main Section -->
+        <section>
+            <div class="links">
+                <a href="#applesection">
+                    <img src="images/applelogo.png">
+                    Apple
+                </a>
+                <a href="#SamsungSection">
+                    <img src="images/samsunglogo.webp">
+                    Samsung
+                </a>
+                <a href="#oppoSection">
+                    <img src="images/oppologo.png">
+                    Oppo
+                </a>
+                <a href="#realmeSection">
+                    <img src="images/realmelogo.png">
+                    Realme
+                </a>
+                <a href="#xiaomiSection">
+                    <img src="images/xiaomilogo.png">
+                    Xiaomi
+                </a>
+                <a href="#huaweiSection">
+                    <img src="images/huaweilogo.png">
+                    Huawei
+                </a>
+                <a href="#otherSection">
+                    <img src="images/otherlink.jfif">
+                    Other
+                </a>
+            </div>
+        </section>
+
+        <!-- Apple Section -->
+        <section>
+            <div class="appleSection p-3" id="applesection">
+                <div class="sechead p-1 ms-4">
+                    <h2>Apple</h2>
+                </div>
+                <div class="products p-3 overflow-auto" id="productList">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Samsung Section -->
+        <section>
+            <div class="samsungSection p-3" id="SamsungSection">
+                <div class="sechead p-1 ms-4">
+                    <h2>Samsung</h2>
+                </div>
+                <div class="products p-3 overflow-auto" id="productList">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Oppo Section -->
+        <section>
+            <div class="oppoSection p-3" id="oppoSection">
+                <div class="sechead p-1 ms-4">
+                    <h2>OPPO</h2>
+                </div>
+                <div class="products p-3 overflow-auto" id="productList">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Realme Section -->
+        <section>
+            <div class="realmeSection p-3" id="realmeSection">
+                <div class="sechead p-1 ms-4">
+                    <h2>Realme</h2>
+                </div>
+                <div class="products p-3 overflow-auto" id="productList">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Xiaomi Section -->
+        <section>
+            <div class="xiaomiSection p-3" id="xiaomiSection">
+                <div class="sechead p-1 ms-4">
+                    <h2>Xiaomi</h2>
+                </div>
+                <div class="products p-3 overflow-auto" id="productList">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Huawei Section -->
+        <section>
+            <div class="huaweiSection p-3" id="huaweiSection">
+                <div class="sechead p-1 ms-4">
+                    <h2>Huawei</h2>
+                </div>
+                <div class="products p-3 overflow-auto" id="productList">
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="otherSection">
+                <div class="container py-5">
+                    <div class="row  gy-3 justify-content-around" id="otherSection">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer bg-dark" style="margin-top: 100px;">
+            <a class="top" href="#top">Back to top</a>
+            <a href="index.html"><img src="images/logo.webp"></a>
+            <div class="navFooter">
+                <div class="navFooterVerticalRow">
+                    <div class="navFooterLinkCol">
+                        <div class="navFooterColHead">Get to Know Us</div>
+                        <ul>
+                            <li class="nav_first">
+                                <a href="https://www.amazon.jobs" class="nav_a">Careers</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.aboutamazon.com/?utm_source=gateway&amp;utm_medium=footer"
+                                    class="nav_a">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.aboutamazon.com/?utm_source=gateway&amp;utm_medium=footer"
+                                    class="nav_a">About Amazon</a>
+                            </li>
+                            <li>
+                                <a href="https://www.amazon.com/ir" class="nav_a">Investor Relations</a>
+                            </li>
+                            <li>
+                                <a href="/gp/browse.html?node=2102313011&amp;ref_=footer_devices" class="nav_a">Amazon
+                                    Devices</a>
+                            </li>
+                            <li class="nav_last ">
+                                <a href="https://www.amazon.science" class="nav_a">Amazon Science</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navFooterLinkCol">
+                        <div class="navFooterColHead">Make Money with Us</div>
+                        <ul>
+                            <li class="nav_first">
+                                <a href="https://services.amazon.com/sell.html?ld=AZFSSOA&amp;ref_=footer_soa"
+                                    class="nav_a">Sell products on Amazon</a>
+                            </li>
+                            <li>
+                                <a href="https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&amp;ref_=footer_b2b"
+                                    class="nav_a">Sell on Amazon Business</a>
+                            </li>
+                            <li>
+                                <a href="https://developer.amazon.com" class="nav_a">Sell apps on Amazon</a>
+                            </li>
+                            <li>
+                                <a href="https://affiliate-program.amazon.com/" class="nav_a">Become an Affiliate</a>
+                            </li>
+                            <li>
+                                <a href="https://advertising.amazon.com/?ref=ext_amzn_ftr" class="nav_a">Advertise Your
+                                    Products</a>
+                            </li>
+                            <li>
+                                <a href="/gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&amp;topic=200260520&amp;ref_=footer_publishing"
+                                    class="nav_a">Self-Publish with Us</a>
+                            </li>
+                            <li>
+                                <a href="https://go.thehub-amazon.com/amazon-hub-locker" class="nav_a">Host an Amazon
+                                    Hub</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navFooterLinkCol">
+                        <div class="navFooterColHead">Amazon Payment Products</div>
+                        <ul>
+                            <li class="nav_first">
+                                <a href="/dp/B07984JN3L?plattr=ACOMFO&amp;ie=UTF-8" class="nav_a">Amazon Business
+                                    Card</a>
+                            </li>
+                            <li>
+                                <a href="/gp/browse.html?node=16218619011&amp;ref_=footer_swp" class="nav_a">Shop with
+                                    Points</a>
+                            </li>
+                            <li>
+                                <a href="/gp/browse.html?node=10232440011&amp;ref_=footer_reload_us"
+                                    class="nav_a">Reload Your Balance</a>
+                            </li>
+                            <li class="nav_last ">
+                                <a href="/gp/browse.html?node=388305011&amp;ref_=footer_tfx" class="nav_a">Amazon
+                                    Currency Converter</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navFooterLinkCol">
+                        <div class="navFooterColHead">Let Us Help You</div>
+                        <ul>
+                            <li class="nav_first">
+                                <a href="/gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&amp;ref_=footer_covid"
+                                    class="nav_a">Amazon and COVID-19</a>
+                            </li>
+                            <li>
+                                <a href="https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya" class="nav_a">Your
+                                    Account</a>
+                            </li>
+                            <li>
+                                <a href="https://www.amazon.com/gp/css/order-history?ref_=footer_yo" class="nav_a">Your
+                                    Orders</a>
+                            </li>
+                            <li>
+                                <a href="/gp/help/customer/display.html?nodeId=468520&amp;ref_=footer_shiprates"
+                                    class="nav_a">Shipping Rates &amp; Policies</a>
+                            </li>
+                            <li>
+                                <a href="/gp/css/returns/homepage.html?ref_=footer_hy_f_4" class="nav_a">Returns &amp;
+                                    Replacements</a>
+                            </li>
+                            <li>
+                                <a href="/gp/digital/fiona/manage?ref_=footer_myk" class="nav_a">Manage Your Content and
+                                    Devices</a>
+                            </li>
+                            <li>
+                                <a href="/gp/BIT/ref=footer_bit_v2_us_A0029?bitCampaignCode=A0029" class="nav_a">Amazon
+                                    Assistant</a>
+                            </li>
+                            <li class="nav_last ">
+                                <a href="/gp/help/customer/display.html?nodeId=508510&amp;ref_=footer_gw_m_b_he"
+                                    class="nav_a">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/user.js"></script>
+    <script src="js/data.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

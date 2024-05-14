@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- CSS Links -->
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/sign.css">
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="img-fluid" src="images/logo.webp" alt="Logo"
+                    style="width: 80px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link fs-5">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="main col-12 col-md-10 col-lg-8">
+            <h2>Register form</h2>
+            <form action="" class="d-flex flex-column ">
+                <input type="text" placeholder="Enter Username" id="username" required autocomplete="off">
+                <input type="email" placeholder="Enter Email" id="email" required autocomplete="off">
+                <input type="password" placeholder="Enter Password" id="password" required autocomplete="off">
+                <a href="./login.html" class="text-decoration-none ">Already have an account</a>
+                <input type="submit" value="Sign up" id="sign_up">
+            </form>
+        </div>
+    </main>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

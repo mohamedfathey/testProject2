@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon</title>
+  <!-- CSS Links -->
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <!-- Custom CSS file -->
+  <link rel="stylesheet" href="css/details.css">
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img class="img-fluid" src="images/logo.webp" alt="Logo"
+          style="width: 80px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item me-3">
+            <a id="user" class="nav-link text-light fs-5"></a>
+          </li>
+          <li class="nav-item">
+            <a id="login" href="login.html" class="nav-link me-5 text-light fs-5">Log in</a>
+          </li>
+          <li class="nav-item me-3 position-relative" id="fav">
+            <a class="nav-link" href="favourite.html">
+              <i class="fa-regular fa-heart fs-3 text-white"></i>
+              <span id="favCount" class="count text-white"></span>
+            </a>
+          </li>
+          <li class="nav-item me-3 position-relative" id="cart">
+            <a class="nav-link position-relative" href="#">
+              <i class="fa-brands fa-opencart text-light fs-3"></i>
+              <span class="text-info count position-absolute" id="count"></span>
+            </a>
+            <div class="cartProduct position-absolute" id="cartProducts">
+              <div class="pe-3" id="menu"></div>
+              <a href="cartProducts.html">Show all products</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" id="logout" class="nav-link text-light fs-5">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="parent p-3">
+    <div class="product p-sm-0 container-fluid">
+      <div class="product-info row gx-5 w-100 mx-auto justify-content-around align-items-center">
+        <!-- <div class="product-img p-0 col-lg-5 col-12 text-sm-center">
+            <img src="./images/iphone14.webp">
+        </div>
+        <div class="product-description col-lg-5 col-12">
+          <div class="description-top">
+            <h1>Apple IPhone 14 With FaceTime </h1>
+            <p class="p1">Price: 34,777 EGP</p>
+          </div>
+
+          <div class="description-bottom">
+            <p class="desc">nvmhbvhvjhv</p>
+            <p class="p2"> <i class="fa-solid fa-chart-simple"></i><span> Cutting-edge Technology Offers top-notch<br>
+                performance and efficiency.</span></p>
+            <div class="decore"></div>
+            <p class="p3"> <i class="fa-solid fa-camera"></i>
+              <span> Advanced Camera Capture stunning photos<br> and videos effortlessly.</span>
+            </p>
+            <div class="decore"></div>
+            <p class="p4"> <i class="fa-solid fa-battery-three-quarters"></i>
+              <span> Long Battery Life Keeps you connected <br>throughout the day</span>
+            </p>
+            <div class="decore"></div>
+            <p class="p5"> <i class="fa-solid fa-fingerprint"></i><span>Innovative Features Offers unique<br>
+                functionalities for everyday tasks.</span></p>
+            <div class="decore"></div>
+            <p class="p6"><i class="fa-solid fa-lock"></i> <span>Enhanced Security Features like Face ID <br>ensure your
+                data stays safe.</span></p>
+            <div class="decore"></div>
+          </div>
+          <button> <i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/user.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/details.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
